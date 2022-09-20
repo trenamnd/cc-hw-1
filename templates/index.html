@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Noah</title>
+</head>
+<body>
+  <div>Welcome to the awesome site made by Noah Trenaman.</div>
+  {% if username %}
+  <div>You are logged in as {{ username }}!</div>
+  {% else %}
+  <div>You are not logged in. </div><a href="/register">register</a> or <a href="/login">login</a>.
+  {% endif %}
+  <div>Here's a list of all our wonderful users:</div>
+  <ul>
+    {% for user in users %}
+      <li>{{ user }}</li>
+    {% endfor %}
+  </ul>
+  <div>The limerick has {{ number_of_words }} words. You can download it directly here: <a href="/download">Limerick.txt</a></div>
+</body>
+</html>
